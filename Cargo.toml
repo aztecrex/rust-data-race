@@ -1,0 +1,6 @@
+[package]
+name = "rust-data-race"
+version = "0.1.0"
+authors = ["Greg Wiley <gwiley@cj.com>"]
+
+[dependencies]
