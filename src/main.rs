@@ -1,3 +1,7 @@
+mod new_owner;
+mod borrower;
+
 fn main() {
-    println!("Hello, world!");
+    new_owner::demo();
+    borrower::demo();
 }
