@@ -16,7 +16,6 @@ pub fn demo() {
     println!("So did I: {:?}", v0_borrowed);
     println!("I still own them: {:?}", v0_another_borrower);
 
-
     let v1 = vec![7,8,9];
     work_with_borrowed_vector(&v1);
     println!("See? I still own them: {:?}", v1);
@@ -24,7 +23,7 @@ pub fn demo() {
     let mut v2 = vec![10, 11, 12];
     println!("I can read this: {:?}", v2);
     println!("I can read it again: {:?}", v2);
-    // let v2_borrowed_for_write = &mut v2;
+    // let v2_borrowed =  &v2;
     modify_borrowed_vector(&mut v2);
     println!("I can still read it: {:?}", v2);
     {
