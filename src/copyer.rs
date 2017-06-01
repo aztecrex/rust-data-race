@@ -16,7 +16,7 @@ pub fn demo() {
     let y = x;
 
     println!("I own this: {:?}", y);
-    println!("I but seem to own it, too: {:?}", x);
+    println!("I seem to own it, too: {:?}", x);
 
     let v1 = Velocity(12.9);
     let v2 = v1;
