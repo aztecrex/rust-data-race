@@ -21,9 +21,13 @@ pub fn demo() {
     println!("See? I still own them: {:?}", v1);
 
     let mut v2 = vec![10, 11, 12];
-    println!("I can read this: {:?}", v2);
-    println!("I can read it again: {:?}", v2);
-    // let v2_borrowed =  &v2;
+    {
+        let v2_non_mut_borrow = &v2;
+        let v2_non_mut_borrow_again =  &v2;
+        println!("borrowed for read {:?}", v2_non_mut_borrow);
+        println!("also borrowed for read {:?}", v2_non_mut_borrow_again);
+        // let v2_mut_borrow = &mut v2; // <--- nope, already borrowed for read
+    }
     modify_borrowed_vector(&mut v2);
     println!("I can still read it: {:?}", v2);
     {
